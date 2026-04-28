@@ -2,41 +2,56 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>お問い合わせ | 株式会社ニッチ</title>
   <style>
     body {
-      font-family: sans-serif;
+      font-family: 'Helvetica Neue', Arial, 'Hiragino Sans', 'Meiryo', sans-serif;
       margin: 0;
+      background: #f5f7fa;
       color: #333;
     }
     header {
-      background: #222;
+      background: #1a1a2e;
       color: #fff;
-      padding: 16px 24px;
+      padding: 20px 40px;
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      gap: 20px;
     }
     header h1 {
       margin: 0;
-      font-size: 1.2rem;
+      font-size: 1.6rem;
+      flex: 1;
+    }
+    .logo {
+      width: 60px;
+      height: 60px;
     }
     nav a {
-      color: #fff;
+      color: #ccc;
       text-decoration: none;
       margin-left: 20px;
+      font-size: 0.95rem;
     }
     nav a:hover {
-      text-decoration: underline;
+      color: #fff;
+    }
+    nav a.active {
+      color: #fff;
+      font-weight: bold;
     }
     main {
-      max-width: 640px;
-      margin: 48px auto;
-      padding: 0 16px;
+      max-width: 800px;
+      margin: 60px auto;
+      padding: 0 20px;
     }
     h2 {
-      font-size: 1.5rem;
-      margin-bottom: 24px;
+      font-size: 1.8rem;
+      color: #1a1a2e;
+      border-bottom: 3px solid #1a1a2e;
+      padding-bottom: 10px;
+      margin-bottom: 30px;
     }
     .form-group {
       margin-bottom: 20px;
@@ -60,40 +75,63 @@
       border-radius: 4px;
       font-size: 1rem;
       box-sizing: border-box;
+      font-family: inherit;
+    }
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    textarea:focus {
+      outline: none;
+      border-color: #1a1a2e;
+      box-shadow: 0 0 0 2px rgba(26,26,46,0.15);
     }
     textarea {
       height: 160px;
       resize: vertical;
     }
     button[type="submit"] {
-      background: #222;
+      background: #1a1a2e;
       color: #fff;
       border: none;
       padding: 12px 32px;
       font-size: 1rem;
       border-radius: 4px;
       cursor: pointer;
+      font-family: inherit;
     }
     button[type="submit"]:hover {
-      background: #444;
+      background: #2e2e50;
     }
     footer {
       text-align: center;
-      padding: 24px;
+      padding: 30px;
+      background: #1a1a2e;
+      color: #aaa;
       font-size: 0.85rem;
-      color: #888;
-      border-top: 1px solid #eee;
-      margin-top: 64px;
+      margin-top: 80px;
     }
   </style>
 </head>
 <body>
   <header>
+    <svg class="logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <ellipse cx="50" cy="62" rx="28" ry="32" fill="#1a1a2e"/>
+      <ellipse cx="50" cy="68" rx="16" ry="22" fill="#fff"/>
+      <ellipse cx="50" cy="30" rx="20" ry="20" fill="#1a1a2e"/>
+      <circle cx="43" cy="26" r="4" fill="#fff"/>
+      <circle cx="57" cy="26" r="4" fill="#fff"/>
+      <circle cx="44" cy="26" r="2" fill="#1a1a2e"/>
+      <circle cx="58" cy="26" r="2" fill="#1a1a2e"/>
+      <polygon points="50,33 44,38 56,38" fill="#f4a300"/>
+      <ellipse cx="22" cy="62" rx="10" ry="18" fill="#1a1a2e" transform="rotate(-15 22 62)"/>
+      <ellipse cx="78" cy="62" rx="10" ry="18" fill="#1a1a2e" transform="rotate(15 78 62)"/>
+      <ellipse cx="42" cy="92" rx="10" ry="5" fill="#f4a300"/>
+      <ellipse cx="58" cy="92" rx="10" ry="5" fill="#f4a300"/>
+    </svg>
     <h1>株式会社ニッチ</h1>
     <nav>
       <a href="index.html">トップ</a>
-      <a href="#">会社概要</a>
-      <a href="contact.html">お問い合わせ</a>
+      <a href="aboutcompany.html">会社概要</a>
+      <a href="#" class="active">お問い合わせ</a>
     </nav>
   </header>
 
